@@ -1,9 +1,5 @@
 package effective.study.chapter01.item01;
 
-import java.util.EnumSet;
-import java.util.HashSet;
-import java.util.Set;
-
 public class Order {
     private boolean prime;
     private boolean urgent;
