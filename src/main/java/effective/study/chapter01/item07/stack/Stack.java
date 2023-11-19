@@ -43,13 +43,4 @@ public class Stack {
         elements[size] = null; //다 쓴 참조 해제
         return result;
     }
-
-    public static void main(String[] args) {
-        Stack stack = new Stack();
-        for(String arg : args)
-            stack.push(arg);
-
-        while (true)
-            System.err.println(stack.pop());
-    }
 }

@@ -1,5 +1,6 @@
 package effective.study.chapter01.item07.cache;
 
+import effective.study.chapter01.item07.listener.User;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -8,7 +9,6 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 class PostRepositoryTest {
 
     @Test
