@@ -1,8 +1,8 @@
 package effective.study.chapter02.item10.inheritance;
 
+import effective.study.chapter02.item10.Color;
 import effective.study.chapter02.item10.Point;
 
-import java.awt.*;
 
 public class ColorPoint extends Point {
     private final Color color;
@@ -42,6 +42,5 @@ public class ColorPoint extends Point {
         Point p2 = new Point(1, 2);
         ColorPoint p3 = new ColorPoint(1, 2, Color.BLUE);
         System.out.printf("%s %s %s%n", p1.equals(p2), p2.equals(p3), p1.equals(p3));
-
     }
 }
