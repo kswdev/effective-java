@@ -5,7 +5,11 @@ import java.util.Map;
 
 // PhoneNumber에 clone 메서드 추가 (79쪽)
 public final class PhoneNumber implements Cloneable {
-    private final short areaCode, prefix, lineNum;
+    private short areaCode, prefix, lineNum;
+
+    public void setPrefix(int prefix) {
+        this.prefix = (short) prefix;
+    }
 
     public PhoneNumber(int areaCode, int prefix, int lineNum) {
         this.areaCode = rangeCheck(areaCode, 999, "지역코드");
@@ -13,10 +17,18 @@ public final class PhoneNumber implements Cloneable {
         this.lineNum  = rangeCheck(lineNum, 9999, "가입자 번호");
     }
 
+    public static PhoneNumber newInstance(PhoneNumber p) {
+        return new PhoneNumber(p.areaCode, p.prefix, p.lineNum);
+    }
+
     private static short rangeCheck(int val, int max, String arg) {
         if (val < 0 || val > max)
             throw new IllegalArgumentException(arg + ": " + val);
         return (short) val;
+    }
+
+    public PhoneNumber deepCopy() {
+        return new PhoneNumber(areaCode, prefix, lineNum);
     }
 
     @Override public boolean equals(Object o) {
