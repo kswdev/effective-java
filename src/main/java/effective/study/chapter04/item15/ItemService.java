@@ -1,6 +1,5 @@
-package effective.study.chapter04.item;
+package effective.study.chapter04.item15;
 
-import effective.study.chapter04.Day;
 import effective.study.chapter04.member.MemberService;
 
 public class ItemService {
