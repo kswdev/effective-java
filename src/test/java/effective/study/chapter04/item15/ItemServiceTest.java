@@ -1,6 +1,6 @@
 package effective.study.chapter04.item15;
 
-import effective.study.chapter04.member.MemberService;
+import effective.study.chapter04.item16.member.MemberService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;

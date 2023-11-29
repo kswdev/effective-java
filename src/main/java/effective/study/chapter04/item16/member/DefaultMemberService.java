@@ -1,4 +1,4 @@
-package effective.study.chapter04.member;
+package effective.study.chapter04.item16.member;
 
 import java.util.Arrays;
 
