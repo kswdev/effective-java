@@ -5,8 +5,9 @@ import java.util.Set;
 
 public class Numbers {
 
-    static int numElementsInCommon(Set s1, Set s2) {
+    static int numElementsInCommon(Set<?> s1, Set s2) {
         int result = 0;
+        //s1.add(1);
         for (Object o1 : s1) {
             if(s2.contains(o1)) {
                 result++;
@@ -18,7 +19,10 @@ public class Numbers {
 
     public static void main(String[] args) {
         Set<Integer> set = new HashSet<>();
-        Set<?> mySet = set;
-        System.out.println(Numbers.numElementsInCommon(Set.of(1, 2, 3), Set.of(1, 2)));
+        set.add(1);
+        set.add(2);
+        set.add(3);
+
+        System.out.println(Numbers.numElementsInCommon(set, Set.of(1, 2)));
     }
 }
