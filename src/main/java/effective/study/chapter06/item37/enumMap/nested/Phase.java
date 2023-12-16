@@ -2,7 +2,6 @@ package effective.study.chapter06.item37.enumMap.nested;
 
 import java.util.EnumMap;
 import java.util.Map;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.groupingBy;
