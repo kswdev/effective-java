@@ -13,7 +13,7 @@ public class RunRepeatTests {
 
         Class<?> testClass = Sample4.class;
         for (Method m : testClass.getDeclaredMethods()) {
-            if (/*m.isAnnotationPresent(ExceptionContainer.class) ||*/
+            if (m.isAnnotationPresent(ExceptionContainer.class) ||
                 m.isAnnotationPresent(ExceptionRepeatTest.class)) {
                 tests++;
                 try {
